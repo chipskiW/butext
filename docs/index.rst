@@ -12,6 +12,6 @@ Here you can find explanations, sample code and our references.
    :maxdepth: 2
    :caption: Contents:
 
-intro
-usage
+   intro
+   usage
 
