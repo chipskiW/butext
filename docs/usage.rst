@@ -9,10 +9,10 @@ Here is an example of importing the proper libraries and functions:
 .. code-block :: python
 
  import pandas as pd
-#import BUtext as bax
-import numpy as np
-import re
-from wordcloud import STOPWORDS
+ #import BUtext as bax
+ import numpy as np
+ import re
+ from wordcloud import STOPWORDS
 
 def tokenize(df, col):
   '''Tokenizes the text in a specified column of a DataFrame.
