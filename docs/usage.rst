@@ -4,8 +4,9 @@ Usage
 
 
 
+Here is an example of importing the proper libraries and functions:
 
-This is a normal text paragraph. The next paragraph is a code sample::
+.. code-block :: python
 
  import pandas as pd
 #import BUtext as bax
