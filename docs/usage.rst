@@ -17,18 +17,20 @@ Here is an example of importing the proper libraries and functions:
  def tokenize(df, col):
    '''Tokenizes the text in a specified column of a DataFrame.
 
-   Parameters
-   ----------
-   df : pandas.DataFrame
-       The input DataFrame containing the text data.
-   col : str
-        The name of the column in `df` that contains text to tokenize.
+Parameters
+----------
+df : pandas.DataFrame
+    The input DataFrame containing the text data.
+col : str
+     The name of the column in `df` that contains text to tokenize.
 
-   Returns
-   -------
-   pandas.DataFrame
-   A new DataFrame with an additional column called 'word',
-   where each row corresponds to a single token.
+Returns
+-------
+pandas.DataFrame
+A new DataFrame with an additional column called 'word',
+where each row corresponds to a single token.
+   
+.. code-block :: python
    '''
    tokens= df.assign(word= df[col].str.lower().str.findall(r"\w+(?:\S?\w+)*")).explode("word")
    return tokens
