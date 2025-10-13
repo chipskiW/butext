@@ -1,9 +1,10 @@
-.. BUtext documentation master file, created by
-   sphinx-quickstart on Sat Oct 11 00:10:03 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+=====================
+BUtext
+=====================
 
-BUtext documentation
+Welcome to the documentation for **BUtext**!
+
+Here you can find explanations, sample code and our references.
 ====================
 
 Add your content using ``reStructuredText`` syntax. See the
