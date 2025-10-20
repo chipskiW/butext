@@ -114,12 +114,14 @@ TF-IDF Example
 Our function is dividing the text frequency of a word in movies description divided by that same word in show descriptions. So by taking a logration of the relative frequency, we can see which word is more greatly associated with with category. Since we are dividing by the text frequency of show, and since  𝑙𝑜𝑔(𝐴/𝐵)=𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) , then a greater negative value means more greatly associated with show, and vice versa.
 
 .. code-block :: python
+
 	mostfreq = pd.concat([  rel_freq[0:10] , rel_freq[-10:]  ])
 	sns.barplot(data=mostfreq, x="logratio", y="word")
 	plt.xlabel("Logratio")
 	plt.show()
 
 .. image:: _static/Unknown.png
+
    :alt: Message class distribution
    :align: center
    :width: 400px
