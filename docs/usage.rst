@@ -53,7 +53,7 @@ Output
 
 .. code-block :: none
 	
-      class	text	                                          doc_id  	word
+      class	text	                                           doc_id  	 word
    0	ham	Go until jurong point, crazy.. Available only ...	 0	  go
    0	ham	Go until jurong point, crazy.. Available only ...	 0	  until
    0	ham	Go until jurong point, crazy.. Available only ...	 0	  jurong
