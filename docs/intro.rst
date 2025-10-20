@@ -63,8 +63,8 @@ Relative Frequency Example
 
 
 
-Term Frequency Inverse Document Frequency(TFIDF)
-------------------------------------------------
+Term Frequency Inverse Document Frequency (TFIDF)
+-------------------------------------------------
 
 TF-IDF Example
 ====================
