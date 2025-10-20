@@ -25,7 +25,6 @@ Tokenization is the process of breaking down text into individual words called t
 This allows the 
 
 .. code-block:: python
-
 tokens = (
     df
     .pipe(bax.tokenize,'text')
