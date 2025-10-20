@@ -49,12 +49,13 @@ Relative Frequency Example
 
 .. code-block:: python
 
-   text = "Read the Docs makes documentation easy."
-    tokens = (
+    df_tfidf = (
     df
-    .pipe(bax.tokenize,'text')
-    )
-    tokens.head()
+    .groupby('doc')['text']
+    .value_counts(normalize=True)
+    .reset_index()
+    .pipe(bax.tf_idf, col='text')
+)
  
 
 .. code-block:: none
@@ -63,7 +64,7 @@ Relative Frequency Example
 
 
 
-Term Frequency Inverse Document Frequency (TFIDF)
+Term Frequency Inverse Document Frequency (TF-IDF)
 -------------------------------------------------
 
 TF-IDF Example
