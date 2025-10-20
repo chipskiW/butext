@@ -111,5 +111,43 @@ SVM  Example
 
 PCA Example
 -----------------
+**Importing Necessary Packages**
+
+.. code-block :: python
+
+	import butext as bax
+	from sklearn.decomposition import PCA
+	import pandas as pd
+	from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+	import matplotlib.pyplot as plt
+
+**Uploading Dataset**
+
+.. code-block :: python
+
+	ntflx = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/class-datasets/main/datasets/netflix.csv")
+	ntflx
+
+** **
+
+.. code-block :: python
+
+	tokens = (
+    ntflx
+    .pipe(bax.tokenize, 'description')
+	)
+	df = tokens.loc[ ~tokens["word"].isin(ENGLISH_STOP_WORDS) ]
+
+	tfidf = (
+ 	   df
+  	  .groupby('id')['word'].value_counts(normalize = True)
+   	 .reset_index()
+   	 .pipe(bax.tf_idf, 'id')
+	)
+	X = tfidf.pivot(index="id", columns="word",values="tf_idf").fillna(0)
+	X
+
+
+
 
 
