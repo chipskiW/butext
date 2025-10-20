@@ -31,6 +31,24 @@ tokens = (
 )
 tokens.head()
 
+
+Tokenization Example
+====================
+
+.. code-block:: python
+
+   text = "Read the Docs makes documentation easy."
+    tokens = (
+    df
+    .pipe(bax.tokenize,'text')
+    )
+    tokens.head()
+ 
+
+.. code-block:: none
+
+   ['read', 'the', 'docs', 'makes', 'documentation', 'easy']
+
 Relative Frequency 
 ------------------
 
