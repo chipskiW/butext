@@ -99,13 +99,13 @@ Output
 
 .. code-block :: none
 	
- precision    recall  f1-score   support
+	 precision    recall  f1-score   support
 
-         ham       0.99      0.99      0.99       956
-        spam       0.95      0.92      0.94       156
+      	   ham       0.99      0.99      0.99       956
+     	   spam       0.95      0.92      0.94       156
 
-    accuracy                           0.98      1112
-   macro avg       0.97      0.96      0.96      1112
-weighted avg       0.98      0.98      0.98      1112
+  	  accuracy                           0.98      1112
+ 	  macro avg       0.97      0.96      0.96      1112
+	weighted avg       0.98      0.98      0.98      1112
 
 
