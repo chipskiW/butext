@@ -162,7 +162,11 @@ TF-IDF Example
 	plt.xticks(rotation = 45)
 	plt.show()
 
+.. image:: _static/Unknown.png
 
+   :alt: Message class distribution
+   :align: center
+   :width: 400px
 
 
 
