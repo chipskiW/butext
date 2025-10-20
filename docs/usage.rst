@@ -7,9 +7,9 @@ Usage
 Here is an example of importing the proper libraries and functions:
 
 .. code-block :: python
-spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
-spam['doc_id'] = range(len(spam)) #Need to tokenize per email, so add index column to data
-spam.head()
+   spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
+   spam['doc_id'] = range(len(spam)) #Need to tokenize per email, so add index column to data
+   spam.head()
 
    class 	text	doc_id
 0	 ham  	Go until jurong point, crazy.. Available only ...	0
