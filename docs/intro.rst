@@ -155,6 +155,14 @@ TF-IDF Example
 	10649	documentary	interviews	0.001473	0.916291	0.001350
 
 
+.. code-block :: python
+
+	viz = x[0:10]
+	sns.barplot(data = viz, x= 'word', y = 'tf_idf', hue = 'genre')
+	plt.xticks(rotation = 45)
+	plt.show()
+
+
 
 
 
