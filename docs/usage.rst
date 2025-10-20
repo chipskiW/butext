@@ -99,7 +99,7 @@ Output
 
 .. code-block :: python
 	
-		 precision    recall  f1-score   support
+			 precision   recall    f1-score      support
 
 	         ham       0.99      0.99      0.99       956
     	    	spam       0.95      0.92      0.94       156
