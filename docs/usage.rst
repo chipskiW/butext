@@ -15,6 +15,7 @@ Here is an example of importing the proper libraries and functions:
 Output
 
 .. code-block :: python
+
       class 	text	                                           doc_id
    0	 ham  	Go until jurong point, crazy.. Available only ...	0
    1	 ham	   Ok lar... Joking wif u oni...	1
