@@ -4,9 +4,10 @@ Usage
 
 
 
-Importing Necessary Packages
---------------------------------------
+**Importing Necessary Packages**
+
 .. code-block :: python
+	
 	import butext as bax
 	import pandas as pd
 	from sklearn.model_selection import train_test_split
@@ -15,15 +16,15 @@ Importing Necessary Packages
 	from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 
-Uploading Datset
-----------------
+**Uploading Datset**
+
 .. code-block :: python
 
    spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
    spam['doc_id'] = range(len(spam)) #Need to tokenize per email, so add index column to data
    spam.head()
 
-Output
+**Output**
 
 .. code-block :: none
 
@@ -36,8 +37,8 @@ Output
 
 
 
-Tokenizing Text
----------------
+**Tokenizing Text**
+
 .. code-block :: python
 
    #Toeknize the data
@@ -47,7 +48,7 @@ Tokenizing Text
    )
    tokens
 
-Output 
+**Output**
 
 .. code-block :: none
 	
@@ -59,8 +60,8 @@ Output
    0	ham	Go until jurong point, crazy.. Available only ...	 0	  crazy
 
 
-TF-IDF
----------------
+**TF-IDF**
+
 
 .. code-block :: python
 
@@ -77,7 +78,7 @@ TF-IDF
 	x = spam_tfidf.sort_values(by = 'tf_idf', ascending= False)
 	x = x.loc[x.tf_idf != 0]
 
-	X = spam_tfidf.pivot(index="doc_id", columns="word", values="tf_idf").fillna(0) #Convert into matrix format for sklearn
+	X = spam_tfidf.pivot(index="doc_id", columns="word", values="tf_idf").fillna(0) #Convert 	into matrix format for sklearn
 	y = spam.set_index("doc_id")["class"] # set y to class, as its what we want to predict
 
 	# Make sure number of entries are the same
@@ -93,7 +94,7 @@ TF-IDF
 	y_pred = svm_model.predict(X_test)
 	print(classification_report(y_test, y_pred))
 
-Output
+**Output**
 
 .. code-block :: none
 	
