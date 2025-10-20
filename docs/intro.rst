@@ -44,8 +44,41 @@ Tokenization Example
 Relative Frequency 
 ------------------
 
+Relative Frequency Example
+====================
+
+.. code-block:: python
+
+   text = "Read the Docs makes documentation easy."
+    tokens = (
+    df
+    .pipe(bax.tokenize,'text')
+    )
+    tokens.head()
+ 
+
+.. code-block:: none
+
+   ['read', 'the', 'docs', 'makes', 'documentation', 'easy']
 
 
 
-Term Frequency Inverse Document Frequency
------------------------------------------
+Term Frequency Inverse Document Frequency(TFIDF)
+------------------------------------------------
+
+TF-IDF Example
+====================
+
+.. code-block:: python
+
+   text = "Read the Docs makes documentation easy."
+    tokens = (
+    df
+    .pipe(bax.tokenize,'text')
+    )
+    tokens.head()
+ 
+
+.. code-block:: none
+
+   ['read', 'the', 'docs', 'makes', 'documentation', 'easy']
