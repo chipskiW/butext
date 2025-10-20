@@ -121,7 +121,7 @@ Our function is dividing the text frequency of a word in movies description divi
 Term-Frequency Inverse Document Frequency (TF-IDF)
 -------------------------------------------------
 
-TF-IDF allows us to measure the uniqueness of a word to a given document.
+TF-IDF highlight terms are both frequent within a specifc document and unqiue across various documents.
 
 TF-IDF Example
 ====================
