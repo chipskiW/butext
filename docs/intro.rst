@@ -109,8 +109,7 @@ Our function is dividing the text frequency of a word in movies description divi
 	plt.xlabel("Logratio")
 	plt.show()
 
-.. image:: _static/Unknown.png
-
+.. image:: /_static/Unknown.png
    :alt: Message class distribution
    :align: center
    :width: 400px
@@ -162,8 +161,7 @@ TF-IDF Example
 	plt.xticks(rotation = 45)
 	plt.show()
 
-.. image:: _static/Unknown.png
-
+.. image:: _static/Unknown-2.png
    :alt: Message class distribution
    :align: center
    :width: 400px
