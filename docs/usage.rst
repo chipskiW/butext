@@ -4,8 +4,6 @@ Usage
 
 
 
-Here is an example of importing the proper libraries and functions:
-
 Importing Necessary Packages
 --------------------------------------
 .. code-block :: python
@@ -27,7 +25,7 @@ Uploading Datset
 
 Output
 
-.. code-block :: python
+.. code-block :: none
 
       class 	text	                                           doc_id
    0	 ham  	Go until jurong point, crazy.. Available only ...	0
@@ -97,7 +95,7 @@ TF-IDF
 
 Output
 
-.. code-block :: python
+.. code-block :: none
 	
 			 precision   recall    f1-score  support
 
