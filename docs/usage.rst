@@ -97,7 +97,7 @@ TF-IDF
 
 Output
 
-.. code-block :: none
+.. code-block :: python
 	
 		 precision    recall  f1-score   support
 
