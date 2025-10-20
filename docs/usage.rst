@@ -12,6 +12,9 @@ Here is an example of importing the proper libraries and functions:
    spam['doc_id'] = range(len(spam)) #Need to tokenize per email, so add index column to data
    spam.head()
 
+Output
+
+.. code-block :: python
       class 	text	                                           doc_id
    0	 ham  	Go until jurong point, crazy.. Available only ...	0
    1	 ham	   Ok lar... Joking wif u oni...	1
