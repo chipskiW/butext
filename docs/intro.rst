@@ -150,8 +150,8 @@ TF-IDF Example
 		genre		word	        tf	   	idf	  	tf_idf
 	10623	documentary	docuseries	0.002510	1.609438	0.004039
 	10611	documentary	documentary	0.008293	0.223144	0.001851
-	9	comedy	stand-up	0.003001	0.510826	0.001533
-	27777	horror	vampires	0.001597	0.916291	0.001463
+	9         comedy        stand-up       0.003001         0.510826        0.001533
+	27777	  horror	vampires	0.001597	0.916291	0.001463
 	10649	documentary	interviews	0.001473	0.916291	0.001350
 
 
