@@ -29,7 +29,7 @@ Tokenization Example
 
 .. code-block:: python
 
-   text = "Read the Docs makes documentation easy."
+   text = 'Welcome to our Butext Documentation!'
     tokens = (
     df
     .pipe(bax.tokenize,'text')
@@ -39,7 +39,7 @@ Tokenization Example
 
 .. code-block:: none
 
-   ['read', 'the', 'docs', 'makes', 'documentation', 'easy']
+   ['welcome', 'to', 'our', 'butext', 'documentation']
 
 Relative Frequency 
 ------------------
