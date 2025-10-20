@@ -68,7 +68,7 @@ Tokenization Example
 Relative Frequency 
 ------------------
 
-*Relative Frequency is a simple mathematical operation that divides text frequency of a single word from one document by the text frequency of the same word from a different document. Revealing how often specifc terms appears.*
+*Relative Frequency is a simple mathematical operation that divides text frequency of a single word from one document by the text frequency of the same word from a different document. Revealing which terms appear more ofte within a specifc document.*
 
 Relative Frequency Example
 ====================
