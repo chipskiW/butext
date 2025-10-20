@@ -78,7 +78,7 @@ Our function is dividing the text frequency of a word in movies description divi
 	plt.xlabel("Logratio")
 	plt.show()
 
-.. image:: n.png
+.. image:: _static/Unknown.png
    :alt: Message class distribution
    :align: center
    :width: 400px
