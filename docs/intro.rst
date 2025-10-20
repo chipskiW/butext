@@ -45,6 +45,8 @@ Output
 Relative Frequency 
 ------------------
 
+*Relative Frequency is a simple mathematical operation that divides text frequency of a single word from one document by the text frequency of the same word from a different document*
+
 Relative Frequency Example
 ====================
 
@@ -66,21 +68,16 @@ Output
 
 
 
-Term Frequency Inverse Document Frequency (TF-IDF)
+Term-Frequency Inverse Document Frequency (TF-IDF)
 -------------------------------------------------
+
+TF-IDF allows us to measure the uniqueness of a word to a given document.
 
 TF-IDF Example
 ====================
 
 .. code-block:: python
 
-   text = "Read the Docs makes documentation easy."
-    tokens = (
-    df
-    .pipe(bax.tokenize,'text')
-    )
-    tokens.head()
- 
 
 .. code-block:: none
 
