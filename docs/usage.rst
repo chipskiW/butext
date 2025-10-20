@@ -2,7 +2,7 @@
  **Use Cases**
 ===============
 
-SVM Usage Example
+SVM  Example
 -----------------
 
 **Importing Necessary Packages**
