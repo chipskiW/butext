@@ -29,14 +29,14 @@ Tokenization Example
 
 .. code-block:: python
 
-   text = 'Welcome to our Butext Documentation!'
+   text = 'Welcome to our Butext documentation!'
     tokens = (
     df
     .pipe(bax.tokenize,'text')
     )
     tokens.head()
- 
 
+Output
 .. code-block:: none
 
    ['welcome', 'to', 'our', 'butext', 'documentation']
@@ -55,7 +55,8 @@ Relative Frequency Example
     .value_counts(normalize=True)
     .reset_index()
     .pipe(bax.tf_idf, col='text')
-)
+
+Output
  
 
 .. code-block:: none
