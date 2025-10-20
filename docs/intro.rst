@@ -37,6 +37,7 @@ Tokenization Example
     tokens.head()
 
 Output
+
 .. code-block:: none
 
    ['welcome', 'to', 'our', 'butext', 'documentation']
