@@ -163,10 +163,20 @@ PCA Example
 
 	array([0.00191735, 0.00177282])
 
+
 ** **
 .. code-block :: python
-pca_df = pd.DataFrame(X_red, columns=['PC1', 'PC2'], index=X.index)
-plt.scatter(x=pca_df.PC1,y=pca_df.PC2,alpha=0.5)
+	pca_df = pd.DataFrame(X_red, columns=['PC1', 'PC2'], index=X.index)
+	plt.scatter(x=pca_df.PC1,y=pca_df.PC2,alpha=0.5)
+
+**Output**
+
+.. image:: /_static/Unknown3.png
+   :alt: Message class distribution
+   :align: center
+   :width: 400px
+
+
 
 
 
