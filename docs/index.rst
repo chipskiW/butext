@@ -4,7 +4,15 @@ BUtext
 
 Welcome to the documentation for **BUtext**!
 
-Here you can find explanations, sample code and our references.
+Topics Covered
+--------------
+
+Butext focuses on text proccessing techniques often used in natural lanuage proccessing. 
+We will cover:
+
+* Tokenization 
+* Relative Frequency 
+* Term Frequency Inverse Document Frequency (TF-IDF)
 
 
 
