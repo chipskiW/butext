@@ -7,13 +7,13 @@ _a link: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 This is ReStructured text syntax
  
 
-Tokenization
-------------
+*Tokenization*
+--------------
 Tokenization is the process of breaking down text into individual words called tokens.[e.g. “I like dogs” -> [“I”, “like”, “dogs’] 
 This allows the 
 
 Example
-====================
+^^^^^^^
 
 **Importing Necessary Packages**
 
@@ -53,13 +53,13 @@ Example
 	ts300399  Five Came Back: The Reference Films  SHOW   1945          TV-MA              48       ['documentation']       ['US']               1.0      NaN       NaN        NaN         0.600             NaN
 	tm84618    Taxi Driver                         MOVIE  1976          R                  113      ['crime', 'drama']      ['US']               NaN      tt0075314 8.3        795222.0    27.612            8.2
 
-Relative Frequency 
-------------------
+*Relative Frequency*
+--------------------
 
 *Relative Frequency is a simple mathematical operation that divides text frequency of a single word from one document by the text frequency of the same word from a different document. Revealing which terms appear more ofte within a specifc document.*
 
 Example
-====================
+^^^^^^^
 
 **Calculating Relative Frequency**
 
@@ -106,13 +106,13 @@ Example
 
 
 
-Term-Frequency Inverse Document Frequency (TF-IDF)
+*Term-Frequency Inverse Document Frequency (TF-IDF)*
 -------------------------------------------------
 
 TF-IDF highlight terms are both frequent within a specifc document and unqiue across various documents.
 
-TF-IDF Example
-====================
+Example
+^^^^^^^
 
 .. code-block :: python
 
