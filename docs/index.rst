@@ -18,7 +18,7 @@ We will cover:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: **CONTENT:**
 
    intro
    usage
