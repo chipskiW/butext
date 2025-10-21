@@ -8,15 +8,6 @@ This is ReStructured text syntax
 
 Here we will explain what the project is, our goals, and how it works. 
 
-Topics Covered
---------------
-
-Butext focuses on text proccessing techniques often used in natural lanuage proccessing. 
-We will cover:
-
-* Tokenization 
-* Relative Frequency 
-* Term Frequency Inverse Document Frequency (TF-IDF)
 
 
 Tokenization
