@@ -147,6 +147,31 @@ PCA Example
 	X = tfidf.pivot(index="id", columns="word",values="tf_idf").fillna(0)
 	X
 
+**Output**
+
+** **
+
+.. code-block :: python
+
+	pca = PCA(n_components=2) #2-dimensional PCA
+	X_red = pca.fit(X).transform(X)
+	pca.explained_variance_ratio_ #percenage of variance in the data explained by PC1 and PC2 respectively
+
+**Output**
+
+.. code-block :: none
+
+	array([0.00191735, 0.00177282])
+
+** **
+.. code-block :: python
+pca_df = pd.DataFrame(X_red, columns=['PC1', 'PC2'], index=X.index)
+plt.scatter(x=pca_df.PC1,y=pca_df.PC2,alpha=0.5)
+
+
+
+
+
 
 
 
