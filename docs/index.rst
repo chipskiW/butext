@@ -1,10 +1,10 @@
 ================
-BUtext
+**BUtext**
 ================
 
 Welcome to the documentation for **BUtext**!
 
-Topics Covered
+*INTRODUCTION*
 --------------
 
 Butext focuses on text proccessing techniques often used in natural lanuage proccessing. 
