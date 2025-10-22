@@ -12,8 +12,8 @@ This is ReStructured text syntax
 Tokenization is the process of breaking down text into individual words called tokens.[e.g. “I like dogs” -> [“I”, “like”, “dogs’] 
 This allows the 
 
-Example
-^^^^^^^
+**Example**
+^^^^^^^^^^^
 
 **Importing Necessary Packages**
 
