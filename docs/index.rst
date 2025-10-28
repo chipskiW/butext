@@ -1,24 +1,22 @@
 ================
-**BUtext**
+BUtext
 ================
 
 Welcome to the documentation for **BUtext**!
 
-*INTRODUCTION*
---------------
+Introduction
+------------
 
-Butext focuses on text proccessing techniques often used in natural lanuage proccessing. 
-We will cover:
+**BUtext** focuses on text processing techniques commonly used in Natural Language Processing (NLP).  
+This documentation will cover the following topics:
 
-* Tokenization 
-* Relative Frequency 
-* Term Frequency Inverse Document Frequency (TF-IDF)
-
-
+* Tokenization  
+* Relative Frequency  
+* Term Frequency–Inverse Document Frequency (TF–IDF)
 
 .. toctree::
    :maxdepth: 2
-   :caption: ** CONTENT: **
+   :caption: Contents
 
    intro
    usage
