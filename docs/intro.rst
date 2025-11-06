@@ -31,7 +31,8 @@ Now we'll start with the basics of tokenization and see how it works:
 **Uploading Datset**
 
 .. code-block :: python
-	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
+	
+	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv",sep="\t")
 	spam.head(5)
 
 **Output**
@@ -48,6 +49,8 @@ Now we'll start with the basics of tokenization and see how it works:
 
 **Tokenization In Action**
 
+Now that our data is loaded, we can use our tokenization function to find some basic information about our data. Our tokenization function is denoted by bax.tokenize and works best within pandas pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis
+
 .. code-block :: python
 
 	spam_tokens = (
@@ -61,9 +64,59 @@ Now we'll start with the basics of tokenization and see how it works:
 
 .. code-block :: none
 	
-	id 	  title  			       type   release_year  age_certification  runtime  genres  		production_countries seasons imdb_id    imdb_score  imdb_votes tmdb_popularity  tmdb_score
-	ts300399  Five Came Back: The Reference Films  SHOW   1945          TV-MA              48       ['documentation']       ['US']               1.0      NaN       NaN        NaN         0.600             NaN
-	tm84618    Taxi Driver                         MOVIE  1976          R                  113      ['crime', 'drama']      ['US']               NaN      tt0075314 8.3        795222.0    27.612            8.2
+		class	text							word
+	0	ham	Go until jurong point, crazy.. Available only ...	jurong
+	0	ham	Go until jurong point, crazy.. Available only ...	point
+	0	ham	Go until jurong point, crazy.. Available only ...	crazy
+	0	ham	Go until jurong point, crazy.. Available only ...	available
+	0	ham	Go until jurong point, crazy.. Available only ...	bugis
+	...	...	... 							...
+	5570	ham	The guy did some bitching but I acted like i'd...	week
+	5570	ham	The guy did some bitching but I acted like i'd...	gave
+	5570	ham	The guy did some bitching but I acted like i'd...	free
+	5571	ham	Rofl. Its true to its name				rofl
+	5571	ham	Rofl. Its true to its name				true
+
+Now that we have out tokens, we can find plenty of useful information. Lets start with the most common words.
+
+.. code-block :: python
+	
+	spam_tokens['word'].value_counts()
+
+.. code-block :: none
+
+		
+	word    count	
+	u	1140
+	2	482
+	i'm	393
+	ur	390
+	just	371
+	...	...
+	3xx	1
+	wc1n	1
+	2667	1
+	gsex	1
+	chief	1
+
+
+These are the most common words used in the emails within the whole dataset, however this not providing much help, so lets visualize the most common words per class (spam or ham).
+
+.. code-block :: python	
+	viz_data = spam_tokens.groupby('class')['word'].value_counts()
+	viz_data = viz_data.reset_index(name = 'count')
+	viz = viz_data.loc[viz_data['class'] == 'spam']
+	viz1 = viz[0:10]
+	sns.barplot(viz1, x = "word", y = 'count')
+	plt.title("Most Common Words in Spam Emails")
+	plt.xlabel("Word")
+	plt.ylabel("Word Count")
+	plt.show()
+
+
+
+
+
 
 *Relative Frequency*
 --------------------
