@@ -118,7 +118,6 @@ These are the most common words used in the emails within the whole dataset, how
 
 
 
-
 *Relative Frequency*
 --------------------
 
