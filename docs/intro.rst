@@ -9,8 +9,9 @@ This is ReStructured text syntax
 
 *Tokenization*
 --------------
-Tokenization is the process of breaking down text into individual words called tokens.[e.g. “I like dogs” -> [“I”, “like”, “dogs’] 
-This allows the 
+Tokenization is the process in which a particular portion of text is split into individual words or tokens. For example, the sentence "I like dogs" would become ["I" , "like", "dogs"]. While at its surface it seems like a pretty simple task, it assists with basic textual anaysis such as word counting and text frequencies all the way to Machine Learning, Natural Language Processing, and Deep Learning. In the 2017 paper "Attention Is All You Need" by Ashish Vaswani et al. which is the creation of the transfomer architecture which gave birth to the GPT decoder which is resposible for Chat-GPT, the architecture starts with tokenizing text and assign each word a vector embedding. Thus, while this task seems rudimentary, it has birthed many of the AI/Machine Learning developments in todays society.
+
+Now we'll start with the basics of tokenization and see how it works:
 
 **Example**
 ^^^^^^^^^^^
@@ -30,20 +31,31 @@ This allows the
 **Uploading Datset**
 
 .. code-block :: python
-	
-	netflix = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/class-				datasets/main/datasets/netflix.csv")
-	netflix.head(2)
+	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
+	spam.head(5)
 
 **Output**
 
-**Tokenizing Text**
+.. code-block :: none
+
+		class	text
+	0	ham	Go until jurong point, crazy.. Available only ...
+	1	ham	Ok lar... Joking wif u oni...
+	2	spam	Free entry in 2 a wkly comp to win FA Cup fina...
+	3	ham	U dun say so early hor... U c already then say...
+	4	ham	Nah I don't think he goes to usf, he lives aro...
+
+
+**Tokenization In Action**
 
 .. code-block :: python
 
-	tokens = (
- 	   netflix
-    	.pipe(bax.tokenize, 'description')
-	)
+	spam_tokens = (
+   	 	spam
+    		.pipe(bax.tokenize, 'text')
+    		.pipe(bax.stopwords, 'word')
+		)
+		spam_tokens
 
 **Output**
 
