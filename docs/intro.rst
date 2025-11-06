@@ -115,6 +115,12 @@ These are the most common words used in the emails within the whole dataset, how
 	plt.show()
 
 
+*graph will be embedded here*
+
+Now we can analyze the top words in each class. The words in spam make sense with "free" or "claim", however, the top words in Ham make a little less sense. It almost seems like a lot of imformal text, which makes sense if emailing someone you know, but still pretty hard to interpet. This leads us to out topic of Relative Frequencies.
+
+
+
 
 
 
