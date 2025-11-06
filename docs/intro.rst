@@ -125,13 +125,16 @@ Now we can analyze the top words in each class. The words in spam make sense wit
 
 
 
+**Sources**
 
+
+*https://arxiv.org/pdf/1706.03762*
+
+*https://www.geeksforgeeks.org/nlp/nlp-how-tokenizing-text-sentence-words-works/*
 
 
 *Relative Frequency*
 --------------------
-
-# Relative Frequencies
 
 While the processes of counting words in tokenization is useful, it sometimes can be hard to interpret. This is mainly due to documents containg hundred of thousands or even millions of tokens. So, in general, words tend to appear more, thus making their appeareance less meaningful. So we can then naturally go to use their text frequncy which can be defined as:
 
@@ -150,99 +153,121 @@ This is important because if a word has a higher frequnecy in document 1, the lo
 
 Example
 ^^^^^^^
-
-**Calculating Relative Frequency**
+**Necessary Imports**
 
 .. code-block :: python
 
-	#Want to find relative frequncy of words assocaited with tv show or movies
-	df = tokens[['word', 'type']]
-	df = df.loc[ ~df["word"].isin(ENGLISH_STOP_WORDS) ]
+	import butext as bax
+	import pandas as pd
+	import matplotlib.pyplot as plt
+	import seaborn as sns
+
+**Load Data** 
+
+spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv", sep="\t")
+spam.head(5)
+
+
+**Relative Frequency In Action**
+
+.. code-block :: python
 
 	rel_freq = (
-    	df
-    	.groupby('type')['word'].value_counts(normalize = True)
-    	.reset_index()
-    	.query('proportion > 0.0005')
-    	.pipe(bax.rel_freq, 'type')
+    		spam
+    		.pipe(bax.tokenize, 'text') #tokenize text
+    		.pipe(bax.stopwords, 'word') # removes stopwords
+    		.groupby('class')['word'].value_counts(normalize = True) # calculates text frequencies per class
+    		.reset_index()
+    		.query('proportion > 0.0005') # removes meaningless words
+    		.pipe(bax.rel_freq, 'class') # calculates relative frequency
 	)
+
+.. code-block :: python
+	
+	rel_freq = rel_freq.sort_values(by = 'logratio', ascending= True)
+	rel_freq
 
 **Output**
 
 .. code-block :: none 
 
-	type   word	  MOVIE	        SHOW	        rel_freq	 logratio
-	245	series	0.000883	0.007439	0.118762	-0.925322
-	71	drama	0.000250	0.001998	0.125120	-0.902672
-	3   adventures	0.000250	0.001733	0.144236	-0.840926
-	225	reality	0.000250	0.001468	0.170246	-0.768923
-	297	tv	0.000250	0.001300	0.192315	-0.715987
+		class	word	ham	spam	rel_freq	logratio
+	597	txt	0.000250	0.012698	0.019688	-1.705791
+	391	mobile	0.000250	0.010412	0.024010	-1.619605
+	145	claim	0.000250	0.009566	0.026135	-1.582778
+	462	prize	0.000250	0.007788	0.032101	-1.493488
+	653	won	0.000250	0.006180	0.040455	-1.393023
+	...	...	...	...	...	...
+	681	ü	0.004536	0.000250	18.142780	1.258704
+	152	come	0.006173	0.000250	24.691358	1.392545
+	358	lt	0.007488	0.000250	29.951691	1.476421
+	423	ok	0.007488	0.000250	29.951691	1.476421
+	266	gt	0.007622	0.000250	30.488459	1.484135
 
-*Our function is dividing the text frequency of a word in movies description divided by that same word in show descriptions. So by taking a logration of the relative frequency, we can see which word is more greatly associated with with category. Since we are dividing by the text frequency of show, and since  𝑙𝑜𝑔(𝐴/𝐵)=𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) , then a greater negative value means more greatly associated with show, and vice versa.*
 
 .. code-block :: python
 
 	mostfreq = pd.concat([  rel_freq[0:10] , rel_freq[-10:]  ])
 	sns.barplot(data=mostfreq, x="logratio", y="word")
 	plt.xlabel("Logratio")
-	plt.show()
+	plt.show() 
 
-.. image:: /_static/Unknown.png
-   :alt: Message class distribution
-   :align: center
-   :width: 400px
+*embedded image here*
 
-
+This graph visualize the top 10 words most associated with spam and ham emails, with spam being positive and ham being negative. We can see we get some of the same words from the general word counting, but also get some new ones. These words are slightly more interperetable than with word counting. However there is even a better measure for this, and it is called tf-idf.
 
 
 
 *Term-Frequency Inverse Document Frequency (TF-IDF)*
 -------------------------------------------------
 
-TF-IDF highlight terms are both frequent within a specifc document and unqiue across various documents.
+TF-IDF stands for text-frequency inverse document-frequency and it used to study mutliple texts. This improves on relative frequency as it can only work on two. TF-IDF is defined as:
 
-Example
-^^^^^^^
+𝑇𝐹⋅𝐼𝐷𝐹=𝑇𝐹ln(1𝐷𝐹)=−𝑇𝐹ln(𝐷𝐹) 
+
+Where TF is text frequency:
+𝑇𝐹=text frequency=# of times 𝑤𝑜𝑟𝑑 appears in a documenttotal words in the document 
+and DF is document frequency:
+𝐷𝐹=document frequency=# of documents 𝑤𝑜𝑟𝑑 appears in# of documents 
+
+This improves upon basic word counting and relative frequecies as it measures the uniquness of a word to a given document, while relative frequency and word counting does not. The logarithm is good because  𝑙𝑜𝑔(1)=0 , so any word that appears in every document will have a TF-IDF of zero and is not unique. This process helps naturally remove stopwords, however, it might be still practice to remove them manually.
+
+TF-IDF can also be used to help create machine learning models like Support Vector Machines and Logistic Regressions as it turns words is specific numerical values (or vectors). This will explored later.
+
+
+**TF-IDF In Action**
+
+Now that our data is loaded, we can use our TF-IDF function to find the most unique word to each class, which is spam or ham. We will use bax.tf_idf and is best used with pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis. However, this is not super important for TF-IDF as it drives many stopwords to a zero value naturally.
 
 .. code-block :: python
 
-	df = tokens2[['genre', 'word']]
-	df = df.loc[ ~df["word"].isin(ENGLISH_STOP_WORDS) ]
-
-	tfidf = (
-    df
-    .groupby('genre')['word'].value_counts(normalize = True)
-    .reset_index()
-    .pipe(bax.tf_idf, 'genre')
+	spam_tfidf = (
+    		spam
+    		.pipe(bax.tokenize, 'text') # tokenizes text
+    		.pipe(bax.stopwords, 'word') # removes stopwords
+    		.groupby('class')['word']
+    		.value_counts(normalize=True) # text frequency
+    		.reset_index()
+    		.pipe(bax.tf_idf, col='class') # tf-idf calculation
 	)
-
-	x = tfidf.loc[tfidf.tf_idf != 0]
-	x= x.sort_values(by = 'tf_idf', ascending= False)
+	x = spam_tfidf.sort_values(by = 'tf_idf', ascending= False)
+	x = x.loc[x.tf_idf != 0] # many words will have tf_idf = 0 but those words aren't 		important, so we can filter them out for cleaner results
 	x
 
-**Output**
 
-.. code-block :: none
-
-		genre		word	        tf	   	idf	  	tf_idf
-	10623	documentary	docuseries	0.002510	1.609438	0.004039
-	10611	documentary	documentary	0.008293	0.223144	0.001851
-	9         comedy        stand-up       0.003001         0.510826        0.001533
-	27777	  horror	vampires	0.001597	0.916291	0.001463
-	10649	documentary	interviews	0.001473	0.916291	0.001350
-
+**Output** 
 
 .. code-block :: python
-
-	viz = x[0:10]
-	sns.barplot(data = viz, x= 'word', y = 'tf_idf', hue = 'genre')
+	
+	graph = x[0:10]
+	sns.barplot(graph, x = "word", y = 'tf_idf', hue = "class" , legend= True)
+	plt.title('Most Unique Words per Class of Email')
+	plt.xlabel('TF-IDF')
+	plt.ylabel('Word')
 	plt.xticks(rotation = 45)
 	plt.show()
 
-.. image:: _static/Unknown-2.png
-   :alt: Message class distribution
-   :align: center
-   :width: 400px
 
+*embedded graph here** 
 
-
+Here we can see which words are the most unique to the spam and ham classes. Now we can finally see which words are truy most associated with each class of email. There is some of the same words from relative frequencies and word counting and there is some new ones. Which one you choose depends on the context of the situation. In situations where there are more than two documents, you need to use TF-IDF instead of relative frequencies. When there is only two documents, relative frequencies is still a great method, and it is a bit more interpretable as well. In the case of Machine Learning, TF-IDF is definitely the better measure to proceed with. Overall, they are both great methods for textual anlysis depending on the context, and most importantly is all possible due to tokenization.
