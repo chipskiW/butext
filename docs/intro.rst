@@ -103,6 +103,7 @@ Now that we have out tokens, we can find plenty of useful information. Lets star
 These are the most common words used in the emails within the whole dataset, however this not providing much help, so lets visualize the most common words per class (spam or ham).
 
 .. code-block :: python	
+	
 	viz_data = spam_tokens.groupby('class')['word'].value_counts()
 	viz_data = viz_data.reset_index(name = 'count')
 	viz = viz_data.loc[viz_data['class'] == 'spam']
