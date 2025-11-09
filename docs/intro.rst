@@ -202,8 +202,9 @@ spam.head(5)
 	plt.xlabel("Logratio")
 	plt.show() 
 
-*embedded image here*
-.. image:: _build/html/_static/
+
+
+.. image:: _build/html/_static/relativefrequencygraph1.png
 	:alt: description
 	:width: 400px
 
