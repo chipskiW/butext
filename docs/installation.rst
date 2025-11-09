@@ -1,13 +1,18 @@
+
 Working with GitHub Actions and PyPI for butext
+===============================================
 
 Like many of Python’s popular libraries, butext is hosted on PyPI, meaning it is pip installable. Whenever a new version of butext is uploaded to PyPI, that version will be the version installed when someone runs the pip installation. The butext library is uploaded automatically to PyPI and TestPyPI whenever a version of the butext project with an increased version number is pushed to github. When bumping up, a maintainer should also make sure to update the install_requires parameter by adding any new libraries that have been implemented into the functions. 
 
-setup(
-(...)
-	version=’0.3.5’
-	install_requires=[‘pandas’,’numpy’,’scikit-learn’]
+.. code-block:: none
+
+	setup(
 	(...)
-	)
+		version=’0.3.5’
+		install_requires=['pandas','numpy','scikit-learn']
+		(...)
+		)
+
 The setup.py file also contains other parameters which, while not always mandatory, inform the page for the project on https://pypi.org/project/butext/
 
 The uploading is managed through the release.yaml file in the workflows folder, which has three jobs that it performs. The first job is the building of the new distribution, which means the building of the .whl and .tar.gz files (the files that are actually processed when the library is run). 
