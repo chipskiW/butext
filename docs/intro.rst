@@ -249,8 +249,6 @@ Now that our data is loaded, we can use our TF-IDF function to find the most uni
 	x
 
 
-**Output** 
-
 .. code-block :: python
 	
 	graph = x[0:10]
@@ -261,6 +259,7 @@ Now that our data is loaded, we can use our TF-IDF function to find the most uni
 	plt.xticks(rotation = 45)
 	plt.show()
 
+**Output** 
 
 *embedded graph here** 
 
