@@ -1,12 +1,6 @@
 ================
 **OVERVIEW**
 ================
-
-
-_a link: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks
-This is ReStructured text syntax
- 
-
 *Tokenization*
 --------------
 Tokenization is the process in which a particular portion of text is split into individual words or tokens. For example, the sentence "I like dogs" would become ["I" , "like", "dogs"]. While at its surface it seems like a pretty simple task, it assists with basic textual anaysis such as word counting and text frequencies all the way to Machine Learning, Natural Language Processing, and Deep Learning. In the 2017 paper "Attention Is All You Need" by Ashish Vaswani et al. which is the creation of the transfomer architecture which gave birth to the GPT decoder which is resposible for Chat-GPT, the architecture starts with tokenizing text and assign each word a vector embedding. Thus, while this task seems rudimentary, it has birthed many of the AI/Machine Learning developments in todays society.
