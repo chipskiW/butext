@@ -19,5 +19,24 @@ This documentation will cover the following topics:
    :caption: Contents
 
    intro
-   usage
+   installation
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Concepts
+
+   concepts/tokenization
+   concepts/Rel_freq
+   concepts/tfidf
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples
+
+   examples/netflix
+   examples/logistic
+   examples/svm
+   examples/pca
+
 
