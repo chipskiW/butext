@@ -1,8 +1,8 @@
 ================
-BUtext
+Welcome to the documentation for **BUtext**!
 ================
 
-Welcome to the documentation for **BUtext**!
+
 
 Introduction
 ------------
