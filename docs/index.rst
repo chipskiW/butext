@@ -14,14 +14,14 @@ This documentation will cover the following topics:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Getting Started
 
    intro
    installation
 
 .. toctree::
    :maxdepth: 2
-   :caption: 
+   :caption: Examples
 
    concepts
    usage 
