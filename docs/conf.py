@@ -26,9 +26,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'alabaster'
 html_theme_options = {
-    "collapse_navigation": False,
-    "navigation_depth": 4,
+    "collapse_navigation": True,
+    "navigation_depth": 2,
     "style_external_links": True,
-    "titles_only": False,
+    "titles_only": True,
 }
 html_static_path = ['_static']
