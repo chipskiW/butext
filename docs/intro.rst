@@ -260,6 +260,8 @@ Now that our data is loaded, we can use our TF-IDF function to find the most uni
 
 **Output** 
 
-*embedded graph here** 
+.. image:: _build/html/_static/TF-IDFgraph.png
+	:alt: description
+	:width: 400px 
 
 Here we can see which words are the most unique to the spam and ham classes. Now we can finally see which words are truy most associated with each class of email. There is some of the same words from relative frequencies and word counting and there is some new ones. Which one you choose depends on the context of the situation. In situations where there are more than two documents, you need to use TF-IDF instead of relative frequencies. When there is only two documents, relative frequencies is still a great method, and it is a bit more interpretable as well. In the case of Machine Learning, TF-IDF is definitely the better measure to proceed with. Overall, they are both great methods for textual anlysis depending on the context, and most importantly is all possible due to tokenization.
