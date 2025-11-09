@@ -43,7 +43,7 @@ Now we'll start with the basics of tokenization and see how it works:
 
 **Tokenization In Action**
 
-Now that our data is loaded, we can use our tokenization function to find some basic information about our data. Our tokenization function is denoted by bax.tokenize and works best within pandas pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis
+Now that our data is loaded, we can use our tokenization function to find some basic information about our data. Our tokenization function is denoted by bax.tokenize and works best within pandas pipe() operator. We will also utilize our stop`words function denoted by bax.stopwords as it removes words not important to our analysis
 
 .. code-block :: python
 
@@ -118,8 +118,8 @@ Now we can analyze the top words in each class. The words in spam make sense wit
 
 **Sources**
 
-
 *https://arxiv.org/pdf/1706.03762*
+
 
 *https://www.geeksforgeeks.org/nlp/nlp-how-tokenizing-text-sentence-words-works/*
 
