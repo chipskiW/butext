@@ -108,12 +108,9 @@ These are the most common words used in the emails within the whole dataset, how
 	plt.ylabel("Word Count")
 	plt.show()
 
-
-.. image:: .. image:: _build/html/_static/Tokenizationgraph1.png
-   :alt: description
-   :width: 400px
-
-*graph will be embedded here*
+.. image:: _build/html/_static/Tokenizationgraph1.png
+	:alt: description
+	:width: 400px
 
 Now we can analyze the top words in each class. The words in spam make sense with "free" or "claim", however, the top words in Ham make a little less sense. It almost seems like a lot of imformal text, which makes sense if emailing someone you know, but still pretty hard to interpet. This leads us to out topic of Relative Frequencies.
 
@@ -129,7 +126,6 @@ Now we can analyze the top words in each class. The words in spam make sense wit
 
 *Relative Frequency*
 --------------------
-
 While the processes of counting words in tokenization is useful, it sometimes can be hard to interpret. This is mainly due to documents containg hundred of thousands or even millions of tokens. So, in general, words tend to appear more, thus making their appeareance less meaningful. So we can then naturally go to use their text frequncy which can be defined as:
 
 𝑇𝐹  = text frequency =  # of times 𝑤𝑜𝑟𝑑 appears in a document/total words in the document 
@@ -207,6 +203,9 @@ spam.head(5)
 	plt.show() 
 
 *embedded image here*
+.. image:: _build/html/_static/
+	:alt: description
+	:width: 400px
 
 This graph visualize the top 10 words most associated with spam and ham emails, with spam being positive and ham being negative. We can see we get some of the same words from the general word counting, but also get some new ones. These words are slightly more interperetable than with word counting. However there is even a better measure for this, and it is called tf-idf.
 
