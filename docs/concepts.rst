@@ -223,8 +223,8 @@ This improves upon basic word counting and relative frequecies as it measures th
 
 TF-IDF can also be used to help create machine learning models like Support Vector Machines and Logistic Regressions as it turns words is specific numerical values (or vectors). This will explored later.
 
-
-**TF-IDF In Action**
+**Example**
+^^^^^^^^^^^
 
 Now that our data is loaded, we can use our TF-IDF function to find the most unique word to each class, which is spam or ham. We will use bax.tf_idf and is best used with pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis. However, this is not super important for TF-IDF as it drives many stopwords to a zero value naturally.
 
