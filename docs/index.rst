@@ -23,6 +23,8 @@ This documentation will cover the following topics:
    :maxdepth: 2
    :caption: 
 
+   concepts
+   usage 
 
 
 
