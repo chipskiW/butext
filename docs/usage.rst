@@ -335,6 +335,7 @@ PCA Example
 
 
 ** **
+
 .. code-block :: python
 
 	
@@ -425,8 +426,8 @@ Problem: Visualizing this PCA makes it clear that an outlier is skewing the data
 	outlier #the value we want to get rid of
 .. code-block :: none
 
-	id	genre	age_certification	PC1	PC2
-		2299	tm375302	documentary	NaN	0.110894	4.468589
+		id		genre	    age_certification	PC1		PC2
+	2299	tm375302	documentary	NaN		0.110894	4.468589
 
 Now that we know what value is causing the discrepancy, we can re-run the function.
 
@@ -437,7 +438,7 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 	#https://www.statology.org/matplotlib-scatterplot-color-by-value/
 	groups = newdf2.groupby("genre")
 	for name, group in groups:
-  plt.plot(group.PC1, group.PC2, marker='o', linestyle='', markersize=4,alpha=0.7,label=name)
+	plt.plot(group.PC1, group.PC2, marker='o', linestyle='', markersize=4,alpha=0.7,label=name)
 	plt.xlabel("PC1 (0.19%)")
 	plt.ylabel("PC2 (0.16%)")
 	plt.legend()
