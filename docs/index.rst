@@ -21,9 +21,15 @@ This documentation will cover the following topics:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Examples
+   :caption: Concepts
 
    concepts
+   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples
+
    usage 
 
 
