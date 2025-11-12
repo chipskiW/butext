@@ -1,4 +1,3 @@
-
 **Tokenization**
 ----------------
 
@@ -6,9 +5,9 @@ Tokenization is the process in which a particular portion of text is split into 
 
 Now we'll start with the basics of tokenization and see how it works:
 
-**Example Code**
 
-Importing Necessary Packages
+
+**Importing Necessary Packages**
 
 .. code-block :: python
 
@@ -20,14 +19,14 @@ Importing Necessary Packages
 
 
 
-*Uploading Datset*
+**Uploading Datset**
 
 .. code-block :: python
 	
 	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv",sep="\t")
 	spam.head(5)
 
-*Output*
+**Output**
 
 .. code-block :: none
 
@@ -39,7 +38,7 @@ Importing Necessary Packages
 	4	ham	Nah I don't think he goes to usf, he lives aro...
 
 
-*Tokenization In Action*
+**Tokenization In Action**
 
 Now that our data is loaded, we can use our tokenization function to find some basic information about our data. Our tokenization function is denoted by bax.tokenize and works best within pandas pipe() operator. We will also utilize our stop`words function denoted by bax.stopwords as it removes words not important to our analysis
 
@@ -52,7 +51,7 @@ Now that our data is loaded, we can use our tokenization function to find some b
 		)
 		spam_tokens
 
-*Output*
+**Output**
 
 .. code-block :: none
 	
@@ -75,7 +74,7 @@ Now that we have out tokens, we can find plenty of useful information. Lets star
 	
 	spam_tokens['word'].value_counts()
 
-*Output*
+**Output**
 
 .. code-block :: none
 
@@ -108,7 +107,7 @@ These are the most common words used in the emails within the whole dataset, how
 	plt.ylabel("Word Count")
 	plt.show()
 
-*Output*
+**Output**
 
 .. image:: _build/html/_static/Tokenizationgraph1.png
 	:alt: description
@@ -144,7 +143,6 @@ Another addition to relative frequencies that assists in intepretation is the lo
 
 This is important because if a word has a higher frequnecy in document 1, the logratio will be more positive, and thus more greatly associated with document 1. This is because  𝑙𝑜𝑔(𝐴𝐵)  = 𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) 
 
-*Example Code*
 
 **Necessary Imports**
 
@@ -229,8 +227,6 @@ and DF is document frequency:
 This improves upon basic word counting and relative frequecies as it measures the uniquness of a word to a given document, while relative frequency and word counting does not. The logarithm is good because  𝑙𝑜𝑔(1)=0 , so any word that appears in every document will have a TF-IDF of zero and is not unique. This process helps naturally remove stopwords, however, it might be still practice to remove them manually.
 
 TF-IDF can also be used to help create machine learning models like Support Vector Machines and Logistic Regressions as it turns words is specific numerical values (or vectors). This will explored later.
-
-**Example Code**
 
 
 Now that our data is loaded, we can use our TF-IDF function to find the most unique word to each class, which is spam or ham. We will use bax.tf_idf and is best used with pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis. However, this is not super important for TF-IDF as it drives many stopwords to a zero value naturally.
