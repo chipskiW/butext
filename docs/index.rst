@@ -17,10 +17,9 @@ Getting Started
 
 .. toctree::
    :maxdepth: 2
-   :caption: 
+   :caption: Introduction
 
    intro
-   installation
    intro_usage
 
 Overview
