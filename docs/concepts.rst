@@ -120,9 +120,9 @@ Now we can analyze the top words in each class. The words in spam make sense wit
 
 
 *https://www.geeksforgeeks.org/nlp/nlp-how-tokenizing-text-sentence-words-works/*
-
+====================
 *Relative Frequency*
---------------------
+====================
 While the processes of counting words in tokenization is useful, it sometimes can be hard to interpret. This is mainly due to documents containg hundred of thousands or even millions of tokens. So, in general, words tend to appear more, thus making their appeareance less meaningful. So we can then naturally go to use their text frequncy which can be defined as:
 
 𝑇𝐹  = text frequency =  # of times 𝑤𝑜𝑟𝑑 appears in a document/total words in the document 
@@ -138,8 +138,8 @@ Another addition to relative frequencies that assists in intepretation is the lo
 
 This is important because if a word has a higher frequnecy in document 1, the logratio will be more positive, and thus more greatly associated with document 1. This is because  𝑙𝑜𝑔(𝐴𝐵)  = 𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) 
 
-Example
-^^^^^^^
+**Example Code**
+-----------------
 **Necessary Imports**
 
 .. code-block :: python
@@ -207,8 +207,9 @@ spam.head(5)
 
 This graph visualize the top 10 words most associated with spam and ham emails, with spam being positive and ham being negative. We can see we get some of the same words from the general word counting, but also get some new ones. These words are slightly more interperetable than with word counting. However there is even a better measure for this, and it is called tf-idf.
 
+====================================================
 *Term-Frequency Inverse Document Frequency (TF-IDF)*
--------------------------------------------------
+====================================================
 
 TF-IDF stands for text-frequency inverse document-frequency and it used to study mutliple texts. This improves on relative frequency as it can only work on two. TF-IDF is defined as:
 
@@ -223,8 +224,8 @@ This improves upon basic word counting and relative frequecies as it measures th
 
 TF-IDF can also be used to help create machine learning models like Support Vector Machines and Logistic Regressions as it turns words is specific numerical values (or vectors). This will explored later.
 
-**Example**
-^^^^^^^^^^^
+**Example Code**
+----------------
 
 Now that our data is loaded, we can use our TF-IDF function to find the most unique word to each class, which is spam or ham. We will use bax.tf_idf and is best used with pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis. However, this is not super important for TF-IDF as it drives many stopwords to a zero value naturally.
 
