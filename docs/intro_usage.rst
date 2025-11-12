@@ -14,6 +14,7 @@ Basic Usage
 	netflix = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/class-datasets/main/datasets/netflix.csv")
 	netflix.head(2)
 
+**Output**
 
 .. code-block :: none 
 
@@ -34,6 +35,8 @@ Data Tokenization
 .. code-block :: python
 
 	tokens['word'].value_counts()
+
+**Output**
 
 .. code-block :: none
 
@@ -71,6 +74,8 @@ Relative Frequency
 	rel_freq = rel_freq.sort_values(by = 'logratio', ascending= True)
 	rel_freq
 
+**Output**
+
 .. code-block :: none
 
 		type	word	MOVIE	SHOW	rel_freq	logratio
@@ -96,6 +101,8 @@ Our function is dividing the text frequency of a word in movies description divi
 	plt.xlabel("Logratio")
 	plt.show()
 
+
+**Output**
 
 .. image:: _build/html/_static/Basic1.png
 	:alt: description
@@ -138,6 +145,8 @@ TF-IDF
 	x = x.sort_values(by = 'tf_idf', ascending= False)
 	x
 
+**Output**
+
 .. code-block :: none
 
 		genre	word	tf	idf	tf_idf
@@ -161,6 +170,8 @@ TF-IDF
 	plt.xticks(rotation = 45)
 	plt.show()
 
+
+**Output**
 
 .. image:: _build/html/_static/Basic2.png
 	:alt: description
