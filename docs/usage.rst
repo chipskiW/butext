@@ -164,8 +164,8 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 .. code-block :: python
 .. code-block :: python
 
-SVM  Example
------------------
+Support Vector Machine (SVM) Example 
+------------------------------------
 
 **Importing Necessary Packages**
 
@@ -271,8 +271,9 @@ SVM  Example
 	weighted avg       0.98      0.98      0.98      1112
 
 
-PCA Example
------------------
+Principle Component Analysis (PCA) Example
+------------------------------------------
+
 **Importing Necessary Packages**
 
 .. code-block :: python
