@@ -100,6 +100,9 @@ Our function is dividing the text frequency of a word in movies description divi
 	plt.show()
 
 **image here**
+.. image:: _build/html/_static/Tokenizationgraph1.png
+	:alt: description
+	:width: 400px
 
 TF-IDF
 .. code-block :: python
@@ -160,6 +163,9 @@ x
 	plt.show()
 
 **image here**
+.. image:: _build/html/_static/Tokenizationgraph1.png
+	:alt: description
+	:width: 400px
 
 
 
@@ -574,6 +580,9 @@ Problem: Visualizing this PCA makes it clear that an outlier is skewing the data
 	plt.scatter(x=newdf.PC1,y=newdf.PC2,alpha=0.5)
 
 **image here**
+.. image:: _build/html/_static/PCA1.png
+	:alt: description
+	:width: 400px
 
 .. code-block :: python
 
@@ -600,7 +609,9 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 	plt.show()
 
 **image here**
-
+.. image:: _build/html/_static/PCA2.png
+	:alt: description
+	:width: 400px
 Judging by the PCA, certain patterns begin to emerge which can tell us about what our principal components may represent. PC1 may have to do with the "seriousness" of words, while PC2 may have to do with whether words are more emotional or descriptive.
 
 .. code-block :: none
