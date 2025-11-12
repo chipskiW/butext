@@ -609,6 +609,7 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 	plt.show()
 
 **image here**
+
 .. image:: _build/html/_static/PCA2.png
 	:alt: description
 	:width: 400px
