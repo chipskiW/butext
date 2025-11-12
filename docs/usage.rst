@@ -93,29 +93,31 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 		macro avg       0.97      0.89      0.92      1112
 		weighted avg       0.97      0.97      0.97      1112
 
+**Top spam-indicative words**
+
 .. code-block :: python
 
 	coef_df = pd.DataFrame({
     "word": X.columns,
     "coef": logreg.coef_[0]
 	}).sort_values(by="coef", ascending=False)
-	coef_df.head(10)  # top spam-indicative words
+	coef_df.head(10) 
 
 **Output**
 
 .. code-block :: none
 
-	word	coef
-8392	txt	3.607208
-2221	claim	3.028673
-6784	reply	2.754200
-5412	mobile	2.417796
-7690	stop	2.376611
-7154	service	2.221344
-6440	prize	2.151703
-8951	won	2.149550
-418	18	2.006830
-8523	urgent	1.952333
+		word	coef
+	8392	txt	3.607208
+	2221	claim	3.028673
+	6784	reply	2.754200
+	5412	mobile	2.417796
+	7690	stop	2.376611
+	7154	service	2.221344
+	6440	prize	2.151703
+	8951	won	2.149550
+	418	18	2.006830
+	8523	urgent	1.952333
 
 .. code-block :: python
 
@@ -125,17 +127,17 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 
 .. code-block :: none
 
-	word	coef
-9214	yup	-1.286121
-4258	i'll	-1.312963
-3804	got	-1.331940
-6884	road	-1.439586
-4130	home	-1.514126
-5068	lt	-1.538432
-3877	gt	-1.579734
-5855	ok	-1.611774
-8407	u	-1.616925
-4260	i'm	-1.797147
+		word	coef
+	9214	yup	-1.286121
+	4258	i'll	-1.312963
+	3804	got	-1.331940
+	6884	road	-1.439586
+	4130	home	-1.514126
+	5068	lt	-1.538432
+	3877	gt	-1.579734
+	5855	ok	-1.611774
+	8407	u	-1.616925
+	4260	i'm	-1.797147
 
 
 .. code-block :: python
@@ -157,15 +159,15 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 
 .. code-block :: none
 
-	lass	word	tf	idf	tf_idf
+		lass	word	tf		idf		tf_idf
 	7524	spam	claim	0.006390	0.693147	0.004429
 	7528	spam	prize	0.005202	0.693147	0.003606
 	35	ham	gt	0.004132	0.693147	0.002864
 	7536	spam	won	0.004128	0.693147	0.002861
 	37	ham	lt	0.004060	0.693147	0.002814
 	...	...	...	...	...	...
-	5798	ham	newspapers	0.000015	0.693147	0.000010
-	5797	ham	newscaster	0.000015	0.693147	0.000010
+	5798	ham	newsp... 0.000015	0.693147	0.000010
+	5797	ham	newsc... 0.000015	0.693147	0.000010
 	5828	ham	non	0.000015	0.693147	0.000010
 	5827	ham	noisy	0.000015	0.693147	0.000010
 	5810	ham	nike	0.000015	0.693147	0.000010
