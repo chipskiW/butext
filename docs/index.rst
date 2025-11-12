@@ -24,7 +24,7 @@ Overview
    :caption: Getting Started
 
    intro
-   intro_usage
+ 
 
 .. toctree::
    :maxdepth: 2
@@ -36,6 +36,7 @@ Overview
    :maxdepth: 2
    :caption: BUtext in Action
 
+   intro_usage
    usage 
 
 
