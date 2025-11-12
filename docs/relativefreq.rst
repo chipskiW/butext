@@ -17,7 +17,7 @@ Another addition to relative frequencies that assists in intepretation is the lo
 This is important because if a word has a higher frequnecy in document 1, the logratio will be more positive, and thus more greatly associated with document 1. This is because  𝑙𝑜𝑔(𝐴𝐵)  = 𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) 
 
 
-**Necessary Imports**
+**Importing Necessary Packages**
 
 .. code-block :: python
 
