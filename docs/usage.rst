@@ -99,8 +99,8 @@ Our function is dividing the text frequency of a word in movies description divi
 	plt.xlabel("Logratio")
 	plt.show()
 
-**image here**
-.. image:: _build/html/_static/Tokenizationgraph1.png
+
+.. image:: _build/html/_static/Basic1.png
 	:alt: description
 	:width: 400px
 
@@ -162,8 +162,8 @@ x
 	plt.xticks(rotation = 45)
 	plt.show()
 
-**image here**
-.. image:: _build/html/_static/Tokenizationgraph1.png
+
+.. image:: _build/html/_static/Basic2.png
 	:alt: description
 	:width: 400px
 
@@ -579,7 +579,7 @@ Problem: Visualizing this PCA makes it clear that an outlier is skewing the data
 
 	plt.scatter(x=newdf.PC1,y=newdf.PC2,alpha=0.5)
 
-**image here**
+
 .. image:: _build/html/_static/PCA1.png
 	:alt: description
 	:width: 400px
@@ -591,7 +591,7 @@ Problem: Visualizing this PCA makes it clear that an outlier is skewing the data
 .. code-block :: none
 
 	id	genre	age_certification	PC1	PC2
-	2299	tm375302	documentary	NaN	0.110894	4.468589
+		2299	tm375302	documentary	NaN	0.110894	4.468589
 
 Now that we know what value is causing the discrepancy, we can re-run the function.
 
@@ -608,7 +608,7 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 	plt.legend()
 	plt.show()
 
-**image here**
+
 
 .. image:: _build/html/_static/PCA2.png
 	:alt: description
