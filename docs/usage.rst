@@ -1,6 +1,7 @@
 
 Logistic Regression
 -------------------
+
 A Logitsitc Regression is a supervised learning model that is used for classification tasks. This model predicts the probability of classes by learning weights and biases, and using the sigmoid function to find probability. It then makes a prediciton based on this probabilty. This model increases the weights of features to make predicitons more accurate, thus it makes the model very interperatable.
 
 TF-IDF can be used when analyzing text for this model since, like most models, it cannot undertand string inputs, only numbers, and TF-IDF is assing each word a number (weight) based of their uniqueness. This in process tells the model which words are more important to certain classes (like spam or ham emails). Since words with zero or low TF-IDF are meaningless, they won't scew with the results of this model.
