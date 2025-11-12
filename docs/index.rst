@@ -9,8 +9,8 @@ This documentation will cover the following topics:
 * Relative Frequency  
 * Term Frequency–Inverse Document Frequency (TF–IDF)
 * Logistic Regression
-* SVM
-* PCA
+* Support Vector Machine (SVM)
+* Principle Component Analysis (PCA)
 
 
 
