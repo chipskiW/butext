@@ -18,6 +18,7 @@ This documentation will cover the following topics:
 
    intro
    installation
+   intro_usage
 
 .. toctree::
    :maxdepth: 2
