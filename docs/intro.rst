@@ -1,12 +1,3 @@
-================
-**Introduction**
-================
-
-
-
-
-
-
 Working with GitHub Actions and PyPI for butext
 ===============================================
 
