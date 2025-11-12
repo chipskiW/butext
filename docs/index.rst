@@ -37,7 +37,9 @@ Overview
    :caption: BUtext in Action
 
    intro_usage
-   usage 
+   logreg
+   SVM
+   PCA
 
 
 
