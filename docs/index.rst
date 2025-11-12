@@ -30,7 +30,9 @@ Overview
    :maxdepth: 2
    :caption: Concepts
 
-   concepts
+   tokenization
+   relativefreq
+   tfidf
    
 .. toctree::
    :maxdepth: 2
