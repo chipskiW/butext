@@ -80,7 +80,9 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 	y_pred = logreg.predict(X_test)
 	print(classification_report(y_test, y_pred))
 
-.. code-block :: python
+**Output**
+
+.. code-block :: none
 
 	precision    recall  f1-score   support
 		0       0.97      1.00      0.98       963
@@ -97,6 +99,8 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
     "coef": logreg.coef_[0]
 	}).sort_values(by="coef", ascending=False)
 	coef_df.head(10)  # top spam-indicative words
+
+**Output**
 
 .. code-block :: none
 
@@ -115,6 +119,8 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 .. code-block :: python
 
 	coef_df.tail(10) #top indicative ham words
+
+**Output**
 
 .. code-block :: none
 
@@ -145,6 +151,8 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 	x = x.loc[x.tf_idf != 0]
 	x
 	#We can see that many word that are important to the regression appear here, showing consistency within results
+
+**Output**
 
 .. code-block :: none
 
@@ -367,6 +375,7 @@ Principle Component Analysis (PCA) Example
 	ntflx = ntflx.loc[ntflx["genre"] != ""]
 	ntflx
 
+**Output**
 
 .. code-block :: none
 
@@ -388,6 +397,8 @@ Principle Component Analysis (PCA) Example
 	newdf = tokPCA(ntflx,"description","id",2,["genre","age_certification"])
 	newdf
 
+
+**Output**
 
 .. code-block :: none
 
@@ -420,6 +431,9 @@ Problem: Visualizing this PCA makes it clear that an outlier is skewing the data
 
 	outlier = newdf[newdf.PC2>1]
 	outlier #the value we want to get rid of
+
+**Output**
+
 .. code-block :: none
 
 		id		genre	    age_certification	PC1		PC2
@@ -441,6 +455,7 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 	plt.show()
 
 
+**Output**
 
 .. image:: _build/html/_static/PCA2.png
 	:alt: description
