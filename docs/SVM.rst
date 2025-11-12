@@ -6,3 +6,14 @@ A SVM is a supervised learning model that is used for classifciation tasks. It t
 TF-IDF works with the SVM model since it does not understand words, it only understands numbers. TF-IDF assigns numerical values to each word that the model can understand. It also reduces the noise of the data as the common words get asigned zero or close to zero, while the more unique words to a class hold more weight. In the case of spam vs ham messages, there is often disinct word patterns that TF-IDF picks up on. For those reasons, TF-IDF would work well for building a SVM model.
 
 
+
+
+.. code-block :: python
+.. code-block :: python
+.. code-block :: python
+.. code-block :: python
+.. code-block :: python
+.. code-block :: python
+.. code-block :: python
+
+
