@@ -12,18 +12,19 @@ This documentation will cover the following topics:
 * SVM
 * PCA
 
-Getting Started
-===============
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Introduction
 
-   intro
-   intro_usage
+
 
 Overview
 ===============
+
+ .. toctree::
+   :maxdepth: 2
+   :caption: Getting Started
+
+   intro
+   intro_usage
 
 .. toctree::
    :maxdepth: 2
