@@ -1,6 +1,6 @@
 
-*Tokenization*
---------------
+**Tokenization**
+----------------
 
 Tokenization is the process in which a particular portion of text is split into individual words or tokens. For example, the sentence "I like dogs" would become ["I" , "like", "dogs"]. While at its surface it seems like a pretty simple task, it assists with basic textual anaysis such as word counting and text frequencies all the way to Machine Learning, Natural Language Processing, and Deep Learning. In the 2017 paper "Attention Is All You Need" by Ashish Vaswani et al. which is the creation of the transfomer architecture which gave birth to the GPT decoder which is resposible for Chat-GPT, the architecture starts with tokenizing text and assign each word a vector embedding. Thus, while this task seems rudimentary, it has birthed many of the AI/Machine Learning developments in todays society.
 
@@ -8,7 +8,7 @@ Now we'll start with the basics of tokenization and see how it works:
 
 **Example Code**
 
-**Importing Necessary Packages**
+Importing Necessary Packages
 
 .. code-block :: python
 
@@ -20,14 +20,14 @@ Now we'll start with the basics of tokenization and see how it works:
 
 
 
-**Uploading Datset**
+*Uploading Datset*
 
 .. code-block :: python
 	
 	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv",sep="\t")
 	spam.head(5)
 
-**Output**
+*Output*
 
 .. code-block :: none
 
@@ -39,7 +39,7 @@ Now we'll start with the basics of tokenization and see how it works:
 	4	ham	Nah I don't think he goes to usf, he lives aro...
 
 
-**Tokenization In Action**
+*Tokenization In Action*
 
 Now that our data is loaded, we can use our tokenization function to find some basic information about our data. Our tokenization function is denoted by bax.tokenize and works best within pandas pipe() operator. We will also utilize our stop`words function denoted by bax.stopwords as it removes words not important to our analysis
 
@@ -52,7 +52,7 @@ Now that our data is loaded, we can use our tokenization function to find some b
 		)
 		spam_tokens
 
-**Output**
+*Output*
 
 .. code-block :: none
 	
@@ -75,7 +75,7 @@ Now that we have out tokens, we can find plenty of useful information. Lets star
 	
 	spam_tokens['word'].value_counts()
 
-**Output**
+*Output*
 
 .. code-block :: none
 
@@ -108,7 +108,7 @@ These are the most common words used in the emails within the whole dataset, how
 	plt.ylabel("Word Count")
 	plt.show()
 
-**Output**
+*Output*
 
 .. image:: _build/html/_static/Tokenizationgraph1.png
 	:alt: description
@@ -126,8 +126,8 @@ Now we can analyze the top words in each class. The words in spam make sense wit
 *https://www.geeksforgeeks.org/nlp/nlp-how-tokenizing-text-sentence-words-works/*
 
 
-*Relative Frequency*
---------------------
+**Relative Frequency**
+----------------------
 
 While the processes of counting words in tokenization is useful, it sometimes can be hard to interpret. This is mainly due to documents containg hundred of thousands or even millions of tokens. So, in general, words tend to appear more, thus making their appeareance less meaningful. So we can then naturally go to use their text frequncy which can be defined as:
 
@@ -144,7 +144,7 @@ Another addition to relative frequencies that assists in intepretation is the lo
 
 This is important because if a word has a higher frequnecy in document 1, the logratio will be more positive, and thus more greatly associated with document 1. This is because  𝑙𝑜𝑔(𝐴𝐵)  = 𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) 
 
-**Example Code**
+*Example Code*
 
 **Necessary Imports**
 
@@ -214,8 +214,8 @@ spam.head(5)
 This graph visualize the top 10 words most associated with spam and ham emails, with spam being positive and ham being negative. We can see we get some of the same words from the general word counting, but also get some new ones. These words are slightly more interperetable than with word counting. However there is even a better measure for this, and it is called tf-idf.
 
 
-*Term-Frequency Inverse Document Frequency (TF-IDF)*
-----------------------------------------------------
+**Term-Frequency Inverse Document Frequency (TF-IDF)**
+------------------------------------------------------
 
 TF-IDF stands for text-frequency inverse document-frequency and it used to study mutliple texts. This improves on relative frequency as it can only work on two. TF-IDF is defined as:
 
