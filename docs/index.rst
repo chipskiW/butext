@@ -23,6 +23,8 @@ Getting Started
    installation
    intro_usage
 
+Overview
+===============
 
 .. toctree::
    :maxdepth: 2
@@ -30,7 +32,6 @@ Getting Started
 
    concepts
    
-
 .. toctree::
    :maxdepth: 2
    :caption: Examples
