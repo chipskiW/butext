@@ -34,7 +34,7 @@ Overview
    
 .. toctree::
    :maxdepth: 2
-   :caption: Examples
+   :caption: BUtext in Action
 
    usage 
 
