@@ -75,6 +75,8 @@ Now that we have out tokens, we can find plenty of useful information. Lets star
 	
 	spam_tokens['word'].value_counts()
 
+**Output**
+
 .. code-block :: none
 
 		
@@ -105,6 +107,8 @@ These are the most common words used in the emails within the whole dataset, how
 	plt.xlabel("Word")
 	plt.ylabel("Word Count")
 	plt.show()
+
+**Output**
 
 .. image:: _build/html/_static/Tokenizationgraph1.png
 	:alt: description
@@ -201,7 +205,7 @@ spam.head(5)
 	plt.xlabel("Logratio")
 	plt.show() 
 
-
+**Output**
 
 .. image:: _build/html/_static/relativefrequencygraph1.png
 	:alt: description
