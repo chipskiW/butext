@@ -1,7 +1,7 @@
 Principle Component Analysis (PCA) Example
 ------------------------------------------
 
-**Importing Necessary Packages**
+Importing Necessary Packages
 
 .. code-block :: python
 
@@ -11,7 +11,7 @@ Principle Component Analysis (PCA) Example
 	from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 	import matplotlib.pyplot as plt
 
-**Uploading Dataset**
+Uploading Dataset
 
 .. code-block :: python
 
