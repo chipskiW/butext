@@ -1,6 +1,8 @@
 Basic Usage 
 -------------------
 
+Importing Necessary Packages
+
 .. code-block :: python
 
 	import pandas as pd
@@ -8,6 +10,9 @@ Basic Usage
 	import seaborn as sns
 	from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 	import butext as bax
+
+
+Uploading Dataset
 
 .. code-block :: python
 
