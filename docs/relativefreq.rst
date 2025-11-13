@@ -55,7 +55,7 @@ spam.head(5)
 
 .. code-block :: none 
 
-		class	word	ham	spam	rel_freq	logratio
+	class	word	ham		spam		rel_freq	logratio
 	597	txt	0.000250	0.012698	0.019688	-1.705791
 	391	mobile	0.000250	0.010412	0.024010	-1.619605
 	145	claim	0.000250	0.009566	0.026135	-1.582778
