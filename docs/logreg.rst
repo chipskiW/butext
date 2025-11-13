@@ -84,13 +84,16 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 
 .. code-block :: none
 
-	precision    recall  f1-score   support
-		0       0.97      1.00      0.98       963
-		1       0.97      0.79      0.87       149
-		
-		accuracy                           0.97      1112
-		macro avg       0.97      0.89      0.92      1112
-		weighted avg       0.97      0.97      0.97      1112
+	 		precision   recall    f1-score  support
+
+	         0       0.97      1.00      0.98       963
+    	    	 1       0.97      0.79      0.87       149
+
+	    accuracy                           0.97      1112
+	   macro avg       0.97      0.89      0.92      1112
+	weighted avg       0.97      0.97      0.97      1112
+
+
 
 **Top spam-indicative words**
 
