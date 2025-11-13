@@ -83,17 +83,17 @@ Uploading Dataset
 
 .. code-block :: none
 
-		type	word	MOVIE	SHOW	rel_freq	logratio
+	type	word	MOVIE		SHOW		rel_freq	logratio
 	245	series	0.000883	0.007439	0.118762	-0.925322
 	71	drama	0.000250	0.001998	0.125120	-0.902672
-	3	adventures	0.000250	0.001733	0.144236	-0.840926
+	3	adven..	0.000250	0.001733	0.144236	-0.840926
 	225	reality	0.000250	0.001468	0.170246	-0.768923
 	297	tv	0.000250	0.001300	0.192315	-0.715987
-	...	...	...	...	...	...
+	...	...	...		...		...		...
 	89	falls	0.001067	0.000250	4.269886	0.630416
-	33	christmas	0.001104	0.000250	4.417124	0.645140
-	37	comedian	0.001337	0.000250	5.349628	0.728324
-	264	stand-up	0.001350	0.000250	5.398707	0.732290
+	33	chris..	0.001104	0.000250	4.417124	0.645140
+	37	comed..	0.001337	0.000250	5.349628	0.728324
+	264	stand..	0.001350	0.000250	5.398707	0.732290
 	98	film	0.002344	0.000250	9.374118	0.971930
 
 
@@ -154,16 +154,16 @@ Our function is dividing the text frequency of a word in movies description divi
 
 .. code-block :: none
 
-		genre	word	tf	idf	tf_idf
-	10623	documentary	docuseries	0.002510	1.609438	0.004039
-	10611	documentary	documentary	0.008293	0.223144	0.001851
+		genre	word		tf		idf		tf_idf
+	10623	docu...	docuseries	0.002510	1.609438	0.004039
+	10611	docu...	documentary	0.008293	0.223144	0.001851
 	9	comedy	stand-up	0.003001	0.510826	0.001533
 	27777	horror	vampires	0.001597	0.916291	0.001463
-	10649	documentary	interviews	0.001473	0.916291	0.001350
-	...	...	...	...	...	...
+	10649	docu...	interviews	0.001473	0.916291	0.001350
+	...	...	...		...		...		...
 	5235	comedy	celebratory	0.000032	0.223144	0.000007	
-	5275	comedy	charged	0.000032	0.223144	0.000007
-	5204	comedy	carries	0.000032	0.223144	0.000007
+	5275	comedy	charged		0.000032	0.223144	0.000007
+	5204	comedy	carries		0.000032	0.223144	0.000007
 	10098	comedy	treacherous	0.000032	0.223144	0.000007
 	10071	comedy	trafficking	0.000032	0.223144	0.000007
 
