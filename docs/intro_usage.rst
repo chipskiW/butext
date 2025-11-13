@@ -130,7 +130,7 @@ Our function is dividing the text frequency of a word in movies description divi
 	tokens2 = (
     netflix
     .pipe(bax.tokenize, 'description')
-)
+	)
 
 .. code-block :: python
 
