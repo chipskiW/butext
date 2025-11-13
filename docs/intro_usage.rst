@@ -23,9 +23,9 @@ Uploading Dataset
 
 .. code-block :: none 
 
-	id	title	type	description	release_year	age_certification	runtime	genres	production_countries	seasons	imdb_id		imdb_score		imdb_votes		tmdb_popularity			tmdb_score
-	0	ts300399	Five Came Back: The Reference Films	SHOW	This collection includes 12 World War II-era p...	1945	TV-MA	48	['documentation']	['US']	1.0	NaN	NaN	NaN	0.600	NaN
-	1	tm84618	Taxi Driver	MOVIE	A mentally unstable Vietnam War veteran works ...	1976	R	113	['crime', 'drama']	['US']	NaN	tt0075314	8.3	795222.0	27.612	8.2
+		id		title		 type	description					release_year	age_certification  runtime	genres	production_countries	seasons	imdb_id		imdb_score		imdb_votes		tmdb_popularity			tmdb_score
+	0	ts300399	Five Came Back.. SHOW	This collection includes 12 World War II-era p...	1945	TV-MA		  48	  ['documentation']	['US']	1.0	NaN	NaN	NaN	0.600	NaN
+	1	tm84618		Taxi Driver	 MOVIE	A mentally unstable Vietnam War veteran works ...	1976	R		 113	    ['crime', 'drama']	['US']	NaN	tt0075314	8.3	795222.0	27.612	8.2
 
 
 *Data Tokenization*
