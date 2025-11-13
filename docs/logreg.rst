@@ -142,13 +142,13 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 .. code-block :: python
 
 	spam_tfidf = (
-    spam
-    .pipe(bax.tokenize, 'text')
-    .groupby('class')['word']
-    .value_counts(normalize=True)
-    .reset_index()
-    .pipe(bax.tf_idf, col='class')
-)
+		spam
+		.pipe(bax.tokenize, 'text')
+		.groupby('class')['word']
+		.value_counts(normalize=True)
+		.reset_index()
+		.pipe(bax.tf_idf, col='class')
+	)
 	x = spam_tfidf.sort_values(by = 'tf_idf', ascending= False)
 	x = x.loc[x.tf_idf != 0]
 	x
@@ -171,6 +171,5 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 	5827	ham	noisy	0.000015	0.693147	0.000010
 	5810	ham	nike	0.000015	0.693147	0.000010
 
-.. code-block :: python
-.. code-block :: python
+
 
