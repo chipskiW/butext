@@ -16,7 +16,7 @@ Uploading Dataset
 
 .. code-block :: python
 
-	netflix = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/class-datasets/main/datasets/netflix.csv")
+	netflix = pd.read_csv("https://tinyurl.com/27kzukwk")
 	netflix.head(2)
 
 **Output**
