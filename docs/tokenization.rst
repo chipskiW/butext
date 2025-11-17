@@ -23,7 +23,7 @@ Now we'll start with the basics of tokenization and see how it works:
 
 .. code-block :: python
 	
-	spam = pd.read_csv("https://raw.githubusercontent.com/Greg-Hallenbeck/HARP-210-NLP/main/datasets/SMSSpamCollection.tsv",sep="\t")
+	spam = pd.read_csv("https://tinyurl.com/4narz8b3",sep="\t")
 	spam.head(5)
 
 **Output**
