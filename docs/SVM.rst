@@ -32,12 +32,12 @@ TF-IDF works with the SVM model since it does not understand words, it only unde
 
 .. code-block :: none
 
-      class 	text	                                           doc_id
+        class 	text	                                           doc_id
    0	 ham  	Go until jurong point, crazy.. Available only ...	0
-   1	 ham	   Ok lar... Joking wif u oni...	1
+   1	 ham	Ok lar... Joking wif u oni...				1
    2	 spam 	Free entry in 2 a wkly comp to win FA Cup fina...	2
-   3	 ham	   U dun say so early hor... U c already then say...	3
-   4	 ham	   Nah I don't think he goes to usf, he lives aro...	4
+   3	 ham	U dun say so early hor... U c already then say...   	3
+   4	 ham	Nah I don't think he goes to usf, he lives aro...	4
 
 
 
