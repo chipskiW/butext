@@ -92,8 +92,6 @@ TF-IDF works with the SVM model since it does not understand words, it only unde
 	y_pred = svm_model.predict(X_test)
 	print(classification_report(y_test, y_pred))
 
-.. code-block :: python
-.. code-block :: python
 
 **Output**
 
