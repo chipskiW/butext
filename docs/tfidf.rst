@@ -6,9 +6,11 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-TF-IDF stands for text-frequency inverse document-frequency and it used to study mutliple texts. This improves on relative frequency as it can only work on two. TF-IDF is defined as:
+TF-IDF (Term Frequency–Inverse Document Frequency) is a method used to analyze multiple texts by assigning importance to words based on how often they appear in a document relative to how common they are across all documents. This improves on relative frequency, which is mainly useful for comparing only two texts.
 
-𝑇𝐹⋅𝐼𝐷𝐹=𝑇𝐹ln(1𝐷𝐹)=−𝑇𝐹ln(𝐷𝐹) 
+TF-IDF is defined as:
+
+												𝑇𝐹⋅𝐼𝐷𝐹=𝑇𝐹ln(1𝐷𝐹)=−𝑇𝐹ln(𝐷𝐹) 
 
 Where TF is text frequency:
 𝑇𝐹=text frequency=# of times 𝑤𝑜𝑟𝑑 appears in a documenttotal words in the document 
