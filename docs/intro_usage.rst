@@ -17,15 +17,19 @@ Uploading Dataset
 .. code-block :: python
 
 	netflix = pd.read_csv("https://tinyurl.com/27kzukwk")
-	netflix.head(2)
+	netflix[['type', 'description']].head(2)
 
 **Output**
 
 .. code-block :: none 
 
-		id		title		 type	description					release_year	age_certification  runtime	genres	production_countries	seasons	imdb_id		imdb_score		imdb_votes		tmdb_popularity			tmdb_score
-	0	ts300399	Five Came Back.. SHOW	This collection includes 12 World War II-era p...	1945	TV-MA		  48	  ['documentation']	['US']	1.0	NaN	NaN	NaN	0.600	NaN
-	1	tm84618		Taxi Driver	 MOVIE	A mentally unstable Vietnam War veteran works ...	1976	R		 113	    ['crime', 'drama']	['US']	NaN	tt0075314	8.3	795222.0	27.612	8.2
+		type	description
+	0	SHOW	This collection includes 12 World War II-era p...
+	1	MOVIE	A mentally unstable Vietnam War veteran works ...
+	2	MOVIE	King Arthur, accompanied by his squire, recrui...
+	3	MOVIE	Brian Cohen is an average young Jewish man, bu...
+	4	MOVIE	12-year-old Regan MacNeil begins to adapt an e...
+
 
 
 *Data Tokenization*
@@ -62,7 +66,6 @@ Uploading Dataset
 
 .. code-block :: python
 
-	#Want to find relative frequncy of words assocaited with tv show or movies
 	df = tokens[['word', 'type']]
 	df = df.loc[ ~df["word"].isin(ENGLISH_STOP_WORDS) ]
 
@@ -96,9 +99,6 @@ Uploading Dataset
 	264	stand..	0.001350	0.000250	5.398707	0.732290
 	98	film	0.002344	0.000250	9.374118	0.971930
 
-
-Our function is dividing the text frequency of a word in movies description divided by that same word in show descriptions. So by taking a logration of the relative frequency, we can see which word is more greatly associated with with category. Since we are dividing by the text frequency of show, and since 𝑙𝑜𝑔(𝐴/𝐵)=𝑙𝑜𝑔(𝐴)−𝑙𝑜𝑔(𝐵) , then a greater negative value means more greatly associated with show, and vice versa.
-
 .. code-block :: python
 
 	mostfreq = pd.concat([  rel_freq[0:10] , rel_freq[-10:]  ])
@@ -112,6 +112,10 @@ Our function is dividing the text frequency of a word in movies description divi
 .. image:: _build/html/_static/Basic1.png
 	:alt: description
 	:width: 400px
+
+
+Our function compares the frequency of  words in movie descriptions to its frequency in a show descriptions. By taking the logarithm of this ratio, we can evaluate how strongly each word is associated with either category. Because log(A / B) = log(A) − log(B), a negative value indicates that the word is more strongly associated with shows, while a positive value indicates a stronger association with movies.
+
 
 *TF-IDF*
 
