@@ -4,6 +4,8 @@
 **Term-Frequency Inverse Document Frequency (TF-IDF)**
 ------------------------------------------------------
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 TF-IDF stands for text-frequency inverse document-frequency and it used to study mutliple texts. This improves on relative frequency as it can only work on two. TF-IDF is defined as:
 
 𝑇𝐹⋅𝐼𝐷𝐹=𝑇𝐹ln(1𝐷𝐹)=−𝑇𝐹ln(𝐷𝐹) 
