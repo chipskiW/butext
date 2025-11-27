@@ -5,8 +5,9 @@ A Logitsitc Regression is a supervised learning model that is used for classific
 
 TF-IDF can be used when analyzing text for this model since, like most models, it cannot undertand string inputs, only numbers, and TF-IDF is assing each word a number (weight) based of their uniqueness. This in process tells the model which words are more important to certain classes (like spam or ham emails). Since words with zero or low TF-IDF are meaningless, they won't scew with the results of this model.
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
-**Importing Necessary Packages**
+Importing Necessary Packages
 
 .. code-block :: python
 
@@ -47,13 +48,18 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 	x = log_tfidf.sort_values(by = 'tf_idf', ascending= False)
 	x = x.loc[x.tf_idf != 0]
 
-.. code-block :: python
-
-	X = log_tfidf.pivot(index="doc_id", columns="word", values="tf_idf").fillna(0) #Convert into matrix format for sklearn
+Convert into matrix format for sklearn
 
 .. code-block :: python
 
-	y = spam.set_index("doc_id")["class"] # set y to class, as its what we want to predict
+	X = log_tfidf.pivot(index="doc_id", columns="word", values="tf_idf").fillna(0)
+
+
+Set y to class
+
+.. code-block :: python
+
+	y = spam.set_index("doc_id")["class"] 
 	
 .. code-block :: python
 
@@ -95,7 +101,7 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 
 
 
-**Top spam-indicative words**
+Top **spam** indicative words
 
 .. code-block :: python
 
@@ -121,9 +127,11 @@ TF-IDF can be used when analyzing text for this model since, like most models, i
 	418	18	2.006830
 	8523	urgent	1.952333
 
+Top **ham** indicative words
+
 .. code-block :: python
 
-	coef_df.tail(10) #top indicative ham words
+	coef_df.tail(10) 
 
 **Output**
 
