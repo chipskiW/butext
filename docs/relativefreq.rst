@@ -1,6 +1,8 @@
 **Relative Frequency**
 ----------------------
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 While the processes of counting words in tokenization is useful, it sometimes can be hard to interpret. This is mainly due to documents containg hundred of thousands or even millions of tokens. So, in general, words tend to appear more, thus making their appeareance less meaningful. So we can then naturally go to use their text frequncy which can be defined as:
 
 𝑇𝐹  = text frequency =  # of times 𝑤𝑜𝑟𝑑 appears in a document/total words in the document 
