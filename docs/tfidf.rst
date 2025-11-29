@@ -6,21 +6,22 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-TF-IDF (Term Frequency–Inverse Document Frequency) is a method used to analyze multiple texts by assigning importance to words based on how often they appear in a document relative to how common they are across all documents. This improves on relative frequency, which is mainly useful for comparing only two texts.
-
-TF-IDF is defined as:
+TF-IDF (Term Frequency–Inverse Document Frequency) is a method used to analyze multiple texts by assigning importance to words based on how often they appear in a document relative to how common they are across all documents. This improves on relative frequency, which is mainly useful for comparing only two texts.TF-IDF is defined as:
 
 												𝑇𝐹⋅𝐼𝐷𝐹=𝑇𝐹ln(1𝐷𝐹)=−𝑇𝐹ln(𝐷𝐹) 
 
 Where TF is text frequency:
-𝑇𝐹=text frequency=# of times 𝑤𝑜𝑟𝑑 appears in a documenttotal words in the document 
-and DF is document frequency:
-𝐷𝐹=document frequency=# of documents 𝑤𝑜𝑟𝑑 appears in# of documents 
 
-This improves upon basic word counting and relative frequecies as it measures the uniquness of a word to a given document, while relative frequency and word counting does not. The logarithm is good because  𝑙𝑜𝑔(1)=0 , so any word that appears in every document will have a TF-IDF of zero and is not unique. This process helps naturally remove stopwords, however, it might be still practice to remove them manually.
+𝑇𝐹=text frequency=# of times 𝑤𝑜𝑟𝑑 appears in a document/total words in the document 
+
+DF is document frequency:
+
+𝐷𝐹=document frequency=# of documents 𝑤𝑜𝑟𝑑 appears in/# of documents 
+
+TF-IDF improves upon basic word counting and relative frequency by measuring how unique a word is to a particular document. While word counts and relative frequency simply track how often a word appears, TF-IDF lowers the importance of words that appear in nearly all documents and increases the importance of words that are specific to fewer documents.
+
 
 TF-IDF can also be used to help create machine learning models like Support Vector Machines and Logistic Regressions as it turns words is specific numerical values (or vectors). This will explored later.
-
 
 Now that our data is loaded, we can use our TF-IDF function to find the most unique word to each class, which is spam or ham. We will use bax.tf_idf and is best used with pipe() operator. We will also utilize our stopewords function denoted by bax.stopwords as it removes words not important to our analysis. However, this is not super important for TF-IDF as it drives many stopwords to a zero value naturally.
 
