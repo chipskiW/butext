@@ -1,6 +1,14 @@
 Principle Component Analysis (PCA) Example
 ------------------------------------------
 
+In data science, data often contains a very high number of dimensions (i.e. columns or parameters), which makes understanding the underlying "shape" of the data difficult. To alleviate this, statisticians and data scientists may choose to project very high-dimensional data into lower-dimensional vector spaces (think: a coordinate plane).
+
+The goal of Principal Component Analysis is to find the axes, given a set number of dimensions, which explain the most variance in the underlying data. In the context of text mining, this is typically done by finding the principal components for the "importance" of words in a corpus of texts. When doing this, every word is its own dimension, and its importance in one text represents the coordinate in that dimension for that piece of text.
+
+By forming principal components, we no longer need to analyze differences between texts using differences in frequencies of every single word in the entire corpus. We can just use differences in principal components, which is not only computationally easier but is also visualizable if you use 2 or 3 dimensions.
+
+----------------------------------------------------------------------------------------------------------------
+
 Importing Necessary Packages
 
 .. code-block :: python
