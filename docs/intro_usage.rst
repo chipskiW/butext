@@ -1,7 +1,7 @@
 Basic Usage 
 -------------------
 
-Importing Necessary Packages
+**Importing Necessary Packages**
 
 .. code-block :: python
 
@@ -12,7 +12,7 @@ Importing Necessary Packages
 	import butext as bax
 
 
-Uploading Dataset
+**Uploading Dataset**
 
 .. code-block :: python
 
@@ -32,7 +32,7 @@ Uploading Dataset
 
 
 
-*Data Tokenization*
+**Data Tokenization**
 
 .. code-block :: python
 
@@ -62,7 +62,7 @@ Uploading Dataset
 	visualize  1
 	iran	   1
 
-*Relative Frequency*
+**Relative Frequency**
 
 .. code-block :: python
 
@@ -117,7 +117,7 @@ Uploading Dataset
 Our function compares the frequency of  words in movie descriptions to its frequency in a show descriptions. By taking the logarithm of this ratio, we can evaluate how strongly each word is associated with either category. Because log(A / B) = log(A) − log(B), a negative value indicates that the word is more strongly associated with shows, while a positive value indicates a stronger association with movies.
 
 
-*TF-IDF*
+**TF-IDF**
 
 .. code-block :: python
 	
