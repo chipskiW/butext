@@ -172,7 +172,6 @@ Now that we know what value is causing the discrepancy, we can re-run the functi
 
 	ntflx2 = ntflx[ntflx.id != "tm375302"]
 	newdf2 = tokPCA(ntflx2,"description","id",2,["genre","age_certification"])
-	#https://www.statology.org/matplotlib-scatterplot-color-by-value/
 	groups = newdf2.groupby("genre")
 	for name, group in groups:
 	plt.plot(group.PC1, group.PC2, marker='o', linestyle='', markersize=4,alpha=0.7,label=name)
